@@ -1,3 +1,4 @@
+from __future__ import division
 from assets import diagnostic_report
 
 
