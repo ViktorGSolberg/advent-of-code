@@ -42,7 +42,7 @@ def main():
     oxygen_generator_rating_decimal = convert_binary_to_decimal(oxygen_generator_rating_binary)
     co2_scrubber_rating_decimal = convert_binary_to_decimal(co2_scrubber_rating_binary)
     life_support_rating = oxygen_generator_rating_decimal * co2_scrubber_rating_decimal
-    print(life_support_rating) #2568384 6086808
+    print(life_support_rating)
 
 if __name__ == "__main__":
     main()
