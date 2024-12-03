@@ -1,15 +1,16 @@
 interface Task<T> {
-    fun parseInput(): T
+    fun parseInput(isPart2: Boolean = false): T
 
     fun doPart1(input: T): Int
 
     fun doPart2(input: T): Int
 
     fun doTask() {
-        val parsedInput = parseInput()
+        val inputPart1 = parseInput()
+        val solutionPart1 = doPart1(inputPart1)
 
-        val solutionPart1 = doPart1(parsedInput)
-        val solutionPart2 = doPart2(parsedInput)
+        val inputPart2 = parseInput(true)
+        val solutionPart2 = doPart2(inputPart2)
 
         println("Solution for part 1")
         println(solutionPart1)

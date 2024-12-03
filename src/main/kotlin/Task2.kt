@@ -2,7 +2,7 @@ import java.io.File
 
 class Task2(private val dataInputPath: String) : Task<List<List<Int>>> {
 
-    override fun parseInput(): List<List<Int>> =
+    override fun parseInput(isPart2: Boolean): List<List<Int>> =
         File(dataInputPath).readLines()
             .map { line ->
                 line.split(" ")

@@ -1,4 +1,4 @@
 fun main() {
-    val task = Task2("src/main/resources/input/day2.txt")
+    val task = Task3("src/main/resources/input/input_task3.txt")
     task.doTask()
 }

@@ -3,7 +3,7 @@ import kotlin.math.abs
 
 class Task1(private val dataInputPath: String) : Task<Pair<List<Int>, List<Int>>> {
 
-    override fun parseInput(): Pair<List<Int>, List<Int>> {
+    override fun parseInput(isPart2: Boolean): Pair<List<Int>, List<Int>> {
         val numbers =
             File(dataInputPath).readLines()
                 .flatMap { line ->
