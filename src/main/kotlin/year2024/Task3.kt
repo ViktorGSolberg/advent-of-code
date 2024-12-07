@@ -1,3 +1,7 @@
+package year2024
+
+import Task
+import toPair
 import java.io.File
 
 class Task3(private val dataInputPath: String) : Task<List<Pair<Int, Int>>> {

@@ -1,17 +1,19 @@
+package year2024
+
+import Task
 import java.io.File
 import kotlin.math.abs
 
-class Task1(private val dataInputPath: String) : Task<Pair<List<Int>, List<Int>>> {
+class Task1(private val inputPath: String) : Task<Pair<List<Int>, List<Int>>> {
 
     override fun parseInput(isPart2: Boolean): Pair<List<Int>, List<Int>> {
-        val numbers =
-            File(dataInputPath).readLines()
-                .flatMap { line ->
-                    line.split("   ")
-                        .map { number -> number.toInt() }
-                }
+        val numbers = File(inputPath).readLines()
+            .flatMap { line ->
+                line.split("   ")
+                    .map { number -> number.toInt() }
+            }
         val left = numbers.slice(numbers.indices step 2)
-        val right = numbers.slice(1..<numbers.size step 2)
+        val right = numbers.slice(1..numbers.size step 2)
 
         return Pair(left, right)
     }
