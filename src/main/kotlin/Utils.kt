@@ -1,3 +1,5 @@
+import kotlin.system.measureTimeMillis
+
 fun <T> List<T>.toPair(): Pair<T, T> {
     if (this.size != 2) {
         throw IllegalArgumentException("List is not of length 2!")
@@ -78,4 +80,13 @@ val solutions2024 = mapOf(
 val solutionsByYear = mapOf(
     2024 to solutions2024
 )
+
+fun timedExecution(taskName: String, task: () -> Any): Any {
+    var res: Any
+    val time = measureTimeMillis {
+        res = task()
+    }.toDouble()
+    println("$taskName - Result: $res, took ${time / 1000} s ($time ms)")
+    return res
+}
 

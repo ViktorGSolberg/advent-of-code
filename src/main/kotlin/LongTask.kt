@@ -7,10 +7,14 @@ interface LongTask<T> {
 
     fun doTask() {
         val inputPart1 = parseInput()
-        val solutionPart1 = doPart1(inputPart1)
+        val solutionPart1 = timedExecution("task 1") {
+            doPart1(inputPart1)
+        }
 
         val inputPart2 = parseInput(true)
-        val solutionPart2 = doPart2(inputPart2)
+        val solutionPart2 = timedExecution("task 2") {
+            doPart2(inputPart2)
+        }
 
         println("Solution for part 1")
         println(solutionPart1)
