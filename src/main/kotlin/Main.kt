@@ -1,6 +1,6 @@
-import year2024.Task7
+import year2024.Task8
 
 fun main() {
-    val task = Task7("src/main/resources/input/input_task7.txt")
+    val task = Task8("src/main/resources/input/input_task8.txt")
     task.doTask()
 }
