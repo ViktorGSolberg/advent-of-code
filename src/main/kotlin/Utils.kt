@@ -15,6 +15,16 @@ fun <T> List<List<T>>.getColumn(column: Int): List<T> = List(this.size) {
     this[it][column]
 }
 
+fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
+    if (index1 in 0 until this.size && index2 in 0 until this.size) {
+        val temp = this[index1]
+        this[index1] = this[index2]
+        this[index2] = temp
+    } else {
+        throw IndexOutOfBoundsException("Indices must be within the bounds of the list.")
+    }
+}
+
 //fun <T> List<List<T>>.getDiagonals(column: Int): List<T> {
 //    val matrixString = this.joinToString("") { list -> list.joinToString("") }
 //    val listLength = this.first().size
